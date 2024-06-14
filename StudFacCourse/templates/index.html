@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS PROJECT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css"  rel="stylesheet" href="{% static  'css/style.css'  %}"  />
+</head>
+<body>
+
+<h2 align="center">Student Academic Management System</h2> <br>
+
+ <nav class="navbar">
+
+     <div class="logo">LOGO</div>
+
+     <ul class="nav-links">
+
+         <div class="menu">
+
+<li>   <a href="{% url 'home'  %}">Home</a></li>
+<li>   <a href="{% url 'about'  %}">About Project</a></li>
+
+<li class="services">
+
+    <a href="#">Login</a>
+
+    <ul class="dropdown">
+            <li><a href="{% url 'studentlogin'  %}">Student</a></li>
+            <li><a href="{% url 'facultylogin'  %}">Faculty</a></li>
+            <li><a href="{% url 'login'  %}">Admin</a></li>
+    </ul>
+
+</li>
+
+<li>   <a href="{% url 'contact'  %}">Contact Us</a></li>
+
+         </div>
+
+</ul>
+
+ </nav>
+
+<br><br>
+
+{% block 'body' %}
+
+<p>I am In Home Page</p>
+
+
+{% endblock %}
+
+
+</body>
+</html>

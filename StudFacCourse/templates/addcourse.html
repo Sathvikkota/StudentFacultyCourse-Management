@@ -1,0 +1,113 @@
+{% extends 'adminhome.html' %}
+{% block 'body' %}
+<h3 align="center" style="color:red">{{message}}</h3>
+<h3 align="center"><u>  Add Course</u></h3>
+
+<form method="post" action="{% url 'insertcourse' %}">
+    {% csrf_token %}
+    <table align="center" width="30%" height="50%">
+        <tr>
+            <td>
+                <label>Select Department</label>
+            </td>
+            <td>
+                <select name="dept" required>
+                    <option value="">--Select--</option>
+                    <option value="CSE(R)">CSE(Regular)</option>
+                    <option value="CSE(H)">CSE(Honors)</option>
+                    <option value="CSIT">CS&IT</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Program</label>
+            </td>
+            <td>
+                <select name="program" required>
+                    <option value="">--Select--</option>
+                    <option value="B.TECH">Bachelor of Technology</option>
+                    <option value="M.TECH">Masters of Technology</option>
+                    <option value="MBA">Master of Business Administration</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Academic Year</label>
+            </td>
+            <td>
+                <select name="ay" required>
+                    <option value="">--Select--</option>
+                    <option value="2021-2022">2021-2022</option>
+                    <option value="2022-2023">2022-2023</option>
+                    <option value="2023-2024">2023-2024</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Semester</label>
+            </td>
+            <td>
+                <select name="sem" required>
+                    <option value="">--Select--</option>
+                    <option value="ODD">ODD</option>
+                    <option value="EVEN">EVEN</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Year</label>
+            </td>
+            <td>
+                <select name="year" required>
+                    <option value="">--Select--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter CourseCode</label>
+            </td>
+            <td>
+                <input type="text"  name="ccode" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter CourseTitle</label>
+            </td>
+            <td>
+                <input type="text"  name="ctitle" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter LTPS</label>
+            </td>
+            <td>
+                <input type="text"  name="ltps" required placeholder="x-x-x-x">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Enter Credits</label>
+            </td>
+            <td>
+                <input type="number"  name="credits" min="0.0" max="6" required>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Add" class="button"></td>
+            <td><input type="reset" value="Clear" class="button"></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}
