@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>SMS PROJECT</title>
+    {% load static %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/studentstyle.css'  %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-I am in student home
+
+<h2 align="center">STUDENT ACADEMIC MANAGEMENT SYSTEM</h2><br>
+
+<a href="{% url 'studenthome' %}">Home</a>&nbsp;&nbsp;
+<a href="{% url 'studentchangepwd'%}">Change Password</a>&nbsp;&nbsp;
+<a href="{% url 'studentcourses' %}">View Courses</a>&nbsp;&nbsp;
+<a href="{% url 'scoursecontent' %}">View Course Content</a>&nbsp;&nbsp;
+<a href="{% url 'studentlogin' %}">Logout</a>
+
+<h3 align="right" style="color:green">Welcome {{sid}}</h3>
+{% block 'body' %}
+<div class="card">
+
+  <div class="container">
+    <h4><b>{{student.studentid}}-{{student.fullname}}</b></h4>
+    <p>{{student.department}}</p>
+      <p>{{student.year}}-{{student.semester}}</p>
+      <p>{{student.email}}</p>
+      <p>{{student.contact}}</p>
+  </div>
+</div>
+
+{% endblock %}
+
 </body>
 </html>

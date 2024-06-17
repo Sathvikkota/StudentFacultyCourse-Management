@@ -1,15 +1,17 @@
-{% extends 'adminhome.html' %}
+{% extends 'facultyhome.html' %}
 
-{% block body %}
+{% block 'body' %}
 
-<h3 align="center"><u>Faculty Mapping Courses</u></h3>
+<h3 align="center"><u>My Courses</u></h3>
+
+<h4>
+Total Courses = {{count}}
+</h4>
 
 <input class="form-control" id="myInput" type="text" placeholder="Course Title"><br>
-<table align="center" border="2" width="100%" height="30%" class="table table-bordered table-striped">
+<table align="center" border="2" width="50%" height="10%" class="table table-bordered table-striped">
     <thead>
     <tr bgcolor="lightblue" align="center">
-         <td>Faculty ID</td>
-         <td>Full Name</td>
         <td>Department</td>
         <td>Program</td>
         <td>Academic Year</td>
@@ -28,8 +30,6 @@
     {% for fmcourse in fmcourses  %}
 
     <tr align="center">
-        <td>{{fmcourse.faculty.facultyid}}</td>
-        <td>{{fmcourse.faculty.fullname}}</td>
          <td>{{fmcourse.course.department}}</td>
         <td>{{fmcourse.course.program}}</td>
          <td>{{fmcourse.course.academicyear}}</td>

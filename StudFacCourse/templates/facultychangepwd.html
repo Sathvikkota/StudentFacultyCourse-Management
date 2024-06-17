@@ -1,26 +1,26 @@
-{% extends 'index.html' %}
+{% extends 'facultyhome.html' %}
 
 {% block 'body' %}
 
 <h2 align="center" style="color:red">{{message}}</h2>
-<h3 align="center"><u>Faculty Login</u></h3>
+<h3 align="center"><u>Change Password</u></h3>
 
 <br>
 
 <center>
 
-<form method="post" action="{% url 'checkfacultylogin' %}">
+<form method="post" action="{% url 'facultyupdatepwd' %}">
 
      {% csrf_token %}
 
-    <table align="center" width="25%" height="20%">
+    <table align="center" width="35%" height="35%">
 
         <tr>
            <td>
-               <lable>Enter Faculty ID</lable>
+               <lable>Enter Old Password</lable>
            </td>
             <td>
-            <input type="number" name="fid" required/>
+            <input type="password" name="opwd" required/>
             </td>
         </tr>
 
@@ -33,10 +33,10 @@
 
           <tr>
            <td>
-               <lable>Enter Password</lable>
+               <lable>Enter New Password</lable>
            </td>
             <td>
-            <input type="password" name="pwd" required/>
+            <input type="password" name="npwd" required/>
             </td>
 
          <tr>
@@ -49,10 +49,10 @@
 
          <tr align="center">
             <td>
-            <input type="submit" value="Login" class="button"/>
+            <input type="submit" value="Update" class="addbutton"/>
             </td>
             <td>
-           <input type="reset" value="Clear" class="button"/>
+           <input type="reset" value="Clear" class="addbutton"/>
             </td>
         </tr>
 

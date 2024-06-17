@@ -1,6 +1,6 @@
 {% extends 'adminhome.html' %}
 
-{% block 'body' %}
+{% block body %}
 <center>
 
 
@@ -13,7 +13,7 @@
 </button>
 
 <button class="button">
-    <a href="">Update Student</a>
+    <a href="{% url 'updatestudent' %}">Update Student</a>
 </button>
 
 <button class="button">
@@ -21,4 +21,6 @@
 </button>
 
     </center>
+{% block additional_content %}
+{% endblock %}
 {% endblock%}

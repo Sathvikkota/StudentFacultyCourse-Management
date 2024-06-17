@@ -1,10 +1,10 @@
-{% extends 'admincourse.html' %}
+{% extends 'studenthome.html' %}
 
-{% block additional_content %}
+{% block 'body' %}
 
 <h3 align="center"><u>View Courses</u></h3><br>
-Total Courses={{count}}
-<br><br>
+
+
 <input class="form-control" id="myInput" type="text" placeholder="Course Title"><br>
 <table align="center" border="3" width="50%" class="table table-bordered table-striped">
     <thead>
@@ -13,22 +13,20 @@ Total Courses={{count}}
         <td>Coursetitle</td>
         <td>Department</td>
         <td>Program</td>
-        <td>Academicyear</td>
-        <td>Semester</td>
+
         <td>Year</td>
         <td>L-T-P-S</td>
         <td>Credits</td>
     </tr>
     </thead>
     <tbody id="myTable">
-    {% for course in coursedata %}
+    {% for course in courses %}
     <tr align="center">
         <td>{{course.coursecode}}</td>
         <td>{{course.coursetitle}}</td>
         <td>{{course.department}}</td>
         <td>{{course.program}}</td>
-        <td>{{course.academicyear}}</td>
-        <td>{{course.semester}}</td>
+
         <td>{{course.year}}</td>
         <td>{{course.ltps}}</td>
         <td>{{course.credits}}</td>
