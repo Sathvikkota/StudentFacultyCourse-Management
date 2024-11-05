@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5u6x(55z6$@*y^**bq#!5025)-$!5kpufjj4o2t%#)0y(0nk#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -84,13 +84,13 @@ WSGI_APPLICATION = 'StudFacCourse.wsgi.application'
 # }
 DATABASES = {
    'default': {
-       'ENGINE': 'django.db.backends.postgresql',#Add Database Engine
-       'NAME': 'Database Name',#Add Database name
-       'USER': 'postgres',#Add User
-       'PASSWORD': 'Your Password',#Add Password
-       'HOST': 'localhost',
-       'PORT': 'Port Number',#Add Port Number
-   }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'studfaccourse',
+        'USER': 'postgres',
+        'PASSWORD': 'sathvik@777',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
 }
 
 
