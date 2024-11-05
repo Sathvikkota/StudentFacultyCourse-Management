@@ -84,12 +84,12 @@ WSGI_APPLICATION = 'StudFacCourse.wsgi.application'
 # }
 DATABASES = {
    'default': {
-       'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'studfaccourse',
-       'USER': 'postgres',
-       'PASSWORD': 'sathvik@777',
+       'ENGINE': 'django.db.backends.postgresql',#Add Database Engine
+       'NAME': 'Database Name',#Add Database name
+       'USER': 'postgres',#Add User
+       'PASSWORD': 'Your Password',#Add Password
        'HOST': 'localhost',
-       'PORT': '5432',
+       'PORT': 'Port Number',#Add Port Number
    }
 }
 
