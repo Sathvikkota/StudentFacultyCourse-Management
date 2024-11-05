@@ -10,7 +10,7 @@ def loginfunction(request):
     return render(request,"login.html")
 
 def facultylogin(request):
-    return render(request,"faculylogin.html")
+    return render(request,"facultylogin.html")
 
 def studentlogin(request):
     return render(request,"studentlogin.html")

@@ -15,3 +15,9 @@ class AddStudentForm(forms.ModelForm):
         fields="__all__"
         exclude={"password"}
         labels={"studentid":"Enter Student ID","fullname":"Student Name"}
+
+class StudentForm(forms.ModelForm):
+    class Meta:
+        model=Student
+        fields="__all__"
+        exclude={"studentid"}
